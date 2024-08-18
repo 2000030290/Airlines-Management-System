@@ -1,0 +1,12 @@
+table creation:
+
+create table users(fname varchar(50), lname varchar(50), dob date, mail varchar(50), address varchar(200), phn bigint, userid int, password varchar(200), cpassword varchar(200));
+
+
+create table flightsearch(fid int, origin varchar(50), destination varchar(50), notr int, eclass int, bclass int, exclass int);
+
+
+create table carrier(cid int generated always as identity primary key, cname varchar(50), ad30 int, ad60 int, ad90 int, bbook int, silver int, gold int, platinum int, refund2 int, refund10 int, refund20 int);
+
+
+create table flight(fid int generated always as identity primary key , cid int, cname varchar(50), Origin varchar(50), Destination varchar(50) ,AirFare int , SeattCapacityEC int , SeatCapacityBC int , SeatCapacityExC int);
